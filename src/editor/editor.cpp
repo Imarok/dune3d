@@ -233,6 +233,7 @@ void Editor::init_view_options()
     m_view_options_menu->append("Selection filter", "win.selection_filter");
     m_view_options_menu->append("Clipping planes", "win.clipping_planes");
     m_view_options_menu->append("Previous construction entities", "win.previous_construction");
+    m_view_options_menu->append("Show only solid models", "win.show_only_solid_models");
     m_view_options_menu->append("Hide irrelevant workplanes", "win.irrelevant_workplanes");
     m_view_options_menu->append("Perspective projection", "win.perspective");
     {
@@ -900,6 +901,8 @@ void Editor::update_view_hints()
     if (m_core.has_documents()) {
         auto &wv = get_current_workspace_view();
 
+        if (wv.m_show_only_solid_models)
+            hints.push_back("only solid models");
         if (wv.m_show_construction_entities_from_previous_groups)
             hints.push_back("prev. construction entities");
         if (wv.m_hide_irrelevant_workplanes)
