@@ -502,7 +502,6 @@ void Dune3DAppWindow::WorkspaceTabLabel::set_can_close(bool can_close)
     else
         m_close_button->hide();
 
-    m_close_button->set_sensitive(can_close);
     m_can_close = can_close;
     m_close_action->set_enabled(can_close);
 }
