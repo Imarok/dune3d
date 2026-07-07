@@ -233,7 +233,7 @@ void Editor::init_view_options()
     m_view_options_menu->append("Selection filter", "win.selection_filter");
     m_view_options_menu->append("Clipping planes", "win.clipping_planes");
     m_view_options_menu->append("Previous construction entities", "win.previous_construction");
-    m_view_options_menu->append("Show only solid models", "win.show_only_solid_models");
+    m_view_options_menu->append("Only solid models", "win.show_only_solid_models");
     m_view_options_menu->append("Hide irrelevant workplanes", "win.irrelevant_workplanes");
     m_view_options_menu->append("Perspective projection", "win.perspective");
     {
